@@ -13,7 +13,7 @@
 
 ## try
 
-`go run main.go`
+`go run main.go 1`
 
 [`./examples/t1.go`](./examples/t1.go)
 
