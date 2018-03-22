@@ -11,6 +11,7 @@ type jsonbyt struct {
     Star []string `json:"strs"`
 }
 
+// Jsontry show json
 func Jsontry(){
 	byt := []byte(`{"num":6.13,"strs":["a","b"]}`)
 	var dat jsonbyt

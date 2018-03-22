@@ -6,6 +6,7 @@ import (
 	"io"
 )
 
+// Pbtry use pb with io.MultiWriter
 func Pbtry(){
 	var file *os.File
 	myDataLen := 100
