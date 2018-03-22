@@ -14,7 +14,7 @@
 
 其中`json`之类的内置解析，go 会教给你一些招式，让你可以快速击倒 -`json🐶`
 
-> try `go run main.go 2`
+> try `go run main.go json`
 
 然后继续往下看
 
@@ -73,7 +73,7 @@ func Douyin(url string) downloader.VideoData {
 
 	var dataDict douyinData 
 
-	json.Unmarshal([]byte(vData), &dataDict) // 解析从 html 获得 的匹配项
+	json.Unmarshal([]byte(vData), &dataDict) // 解析从 html:string -> json 获得 的匹配项
 
     size := request.Size(dataDict.Video.RealPlayAddr, url) 
     // 从 要下载的 网址 head.Content-Length 知道下载的 文件大小
@@ -95,6 +95,13 @@ func Douyin(url string) downloader.VideoData {
 	return data
 }
 ```
+
+- `json.Unmarshal([]byte(vData), &dataDict)`
+
+> 可以试试 `go run main.go json` [`./examples/t4-json.go`](./examples/t4-json.go) 解析从 string -> json 获得 的匹配项
+
+
+
 </details>
 
 ### Download
@@ -234,6 +241,8 @@ func (data VideoData) urlSave(
 
 代码 24-107
 
+<details>
+
 ``` go
 // Request base request
 func Request(
@@ -325,7 +334,12 @@ func Request(
 			color.Green("%d", res.StatusCode)
 		}
     }
-    // 返回请求结果
+    // 返回请求结果 
 	return res
 
+	    // _, copyErr := io.Copy(writer, res.Body) // res.Body 即是视频流本身 复制给文件 和 进度条
+// 上小节的
 ```
+
+
+</details>

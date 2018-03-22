@@ -19,4 +19,7 @@ func main(){
 	if(exampleIndex[0] == "pb"){
 		examples.Pbtry()
 	}	
+	if(exampleIndex[0] == "json"){
+		examples.Jsontry()
+	}	
 }
