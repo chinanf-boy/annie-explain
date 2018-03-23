@@ -123,17 +123,22 @@ func main() {
 
 > 从给予的URL中获得域名
 
-- [config explain](./config.explain.md)
+- [config explain ](./config.explain.md)
 
 > 有关-`"github.com/iawia002/annie/config"` 的声明与定义
 
-- [extractors explain](./extractors.explain.md)
+- [extractors explain ](./extractors.explain.md)
 
 > 提取库-定义不同网址的解析
 
 ---
 
 ## utils
+
+下面工具函数-一般不细看，只要知道什么功能就行
+
+<details>
+
 
 ``` go
 package utils
@@ -341,3 +346,4 @@ func M3u8URLs(uri string) []string {
 	return urls
 }
 ```
+</details>
