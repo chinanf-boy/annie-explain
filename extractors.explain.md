@@ -32,6 +32,8 @@
 
 ## 1. extractors-Douyin
 
+`annie/extractors/douyin.go`
+
 <details>
 
 ``` go
@@ -372,6 +374,9 @@ func Request(
 ## 5. douyin-test
 
 > 一般来说，测试最后先写在实现前，这样会有方向一点
+
+`annie/extractors/douyin_test.go`
+
 
 ``` go
 package extractors
