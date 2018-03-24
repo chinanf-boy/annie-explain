@@ -4,7 +4,9 @@
 
 ---
 
-- [douyin](#douyin)
+- [douyin](#extractors-douyin)
+
+- [哔哩哔哩](./bilibili.extractors.md)
 
 ---
 
@@ -17,6 +19,18 @@
 > try `go run main.go json`
 
 然后继续往下看
+
+---
+
+- [extractors-Douyin](#extractors-douyin)
+
+- [Download](#download)
+
+- [urlSave](#urlsave)
+
+- [request-Request](#request-request)
+
+- [douyin-test](#douyin-test)
 
 ---
 
@@ -343,3 +357,40 @@ func Request(
 
 
 </details>
+
+## douyin-test
+
+> 一般来说，测试最后先写在实现前，这样会有方向一点
+
+``` go
+package extractors
+
+import (
+	"testing"
+
+	"github.com/iawia002/annie/config"
+	"github.com/iawia002/annie/test"
+)
+
+func TestDouyin(t *testing.T) { 
+	config.InfoOnly = true
+	tests := []struct {
+		name string
+		args test.Args
+	}{
+		{
+			name: "normal test",
+			args: test.Args{
+				URL:   "https://www.douyin.com/share/video/6509219899754155272",
+				Title: "好冷  逢考必过",
+			},
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			data := Douyin(tt.args.URL) // Douyin 返回的 是定义的视频数据块
+			test.Check(t, tt.args, data) // 对比 tt.args 和 data 对象 每一个是否相同
+		})
+	}
+}
+```
