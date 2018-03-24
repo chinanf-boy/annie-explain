@@ -4,7 +4,7 @@
 
 ---
 
-- [douyin](#extractors-douyin)
+- [douyin](#1-extractors-douyin)
 
 - [哔哩哔哩](./bilibili.extractors.md)
 
@@ -14,7 +14,7 @@
 
 ---
 
-然后继续往下看
+然后继续往下看 是 [抖音部分](1-extractors-douyin)
 
 ---
 
