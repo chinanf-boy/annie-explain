@@ -10,31 +10,27 @@
 
 ---
 
-类型和结构定义，是 go 的特性，这些特性对于-程序的稳定和递进有影响
+在 [⬆️上节](./readme.md),我们知道了, 仅仅只是知道-哪个网站, 然后把`用户输入-url-` 给到 对应的`extractors`
 
-但，要适度。一般的类型也就那几个，string, number 之类
-
-其中`json`之类的内置解析，go 会教给你一些招式，让你可以快速击倒 -`json🐶`
-
-> try `go run main.go json`
+---
 
 然后继续往下看
 
 ---
 
-- [extractors-Douyin](#extractors-douyin)
+- [extractors-Douyin ](#1-extractors-douyin)
 
-- [Download](#download)
+- [Download ](#2-download)>> 这
 
-- [urlSave](#urlsave)
+- [urlSave ](#3-urlsave)>> 三
 
-- [request-Request](#request-request)
+- [request-Request ](#4-request-request)>> 个 其实并不独属于douyin, 是通用下载
 
-- [douyin-test](#douyin-test)
+- [douyin-test](#5-douyin-test)
 
 ---
 
-## extractors-Douyin
+## 1. extractors-Douyin
 
 <details>
 
@@ -116,9 +112,24 @@ func Douyin(url string) downloader.VideoData {
 
 
 
+<details>
+
+<summary>有关go对json的使用</summary>
+
+类型和结构定义，是 go 的特性，这些特性对于-程序的稳定和递进有影响
+
+但，要适度。一般的类型也就那几个，`string`, `number` 之类
+
+其中`json`之类的内置解析，go 会教给你一些招式，让你可以快速击倒 -`json🐶`
+
+> try `go run main.go json`
+
 </details>
 
-### Download
+
+</details>
+
+### 2. Download
 
 `annie/downloader/downloader.go`
 
@@ -161,7 +172,7 @@ func (data VideoData) Download(refer string) {
 
 ---
 
-### urlSave
+### 3. urlSave
 
 `annie/downloader/downloader.go`
 
@@ -249,7 +260,7 @@ func (data VideoData) urlSave(
 </details>
 
 
-### request-Request
+### 4. request-Request
 
 `annie/request/request.go`
 
@@ -358,7 +369,7 @@ func Request(
 
 </details>
 
-## douyin-test
+## 5. douyin-test
 
 > 一般来说，测试最后先写在实现前，这样会有方向一点
 
