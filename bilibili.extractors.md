@@ -26,6 +26,15 @@ annie -c cookies.txt https://www.bilibili.com/video/av20203945/
 
 ---
 
+1. [Bilibili](#1-bilibili)
+
+2. [bilibiliDownload](#2-bilibilidownload)
+
+3. [genApi](#3-genapi)
+
+4. [genURL](#4-genurl)
+
+5. [getMultiPageData](#5-getmultipagedata)
 
 ---
 
@@ -33,6 +42,7 @@ annie -c cookies.txt https://www.bilibili.com/video/av20203945/
 
 `annie/extractors/bilibili.go`
 
+>分析-url-, 全部拆成单视频数据块, 送入`bilibiliDownload`
 
 <details>
 
@@ -120,6 +130,8 @@ func Bilibili(url string) {
 
 ## 2. bilibiliDownload
 
+> 用尽一切, 获取真实视频链接, 通用下载⬇️
+
 <details>
 
 ``` go
@@ -188,7 +200,11 @@ func bilibiliDownload(url string, options bilibiliOptions) downloader.VideoData 
 
 ---
 
-## genApi
+👇-🔧`bilibili`工具函数
+
+---
+
+## 3. genApi
 
 > 从一个有验证的api中, 获取真实的视频链接
 
@@ -249,7 +265,7 @@ func genAPI(aid, cid string, bangumi bool) string {
 ```
 </details>
 
-## genURL
+## 4. genURL
 
 > 总结-从genApi-获取的真实的视频块
 
@@ -275,7 +291,7 @@ func genURL(durl []dURLData) ([]downloader.URLData, int64) {
 ```
 </details>
 
-## getMultiPageData
+## 5. getMultiPageData
 
 > 找到匹配项, 然后`string`转成->`json`储存
 
