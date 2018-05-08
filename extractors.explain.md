@@ -14,7 +14,7 @@
 
 ---
 
-然后继续往下看 是 [抖音部分](1-extractors-douyin)
+然后继续往下看 是 [抖音部分](#1-extractors-douyin)
 
 ---
 

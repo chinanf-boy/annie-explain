@@ -37,6 +37,17 @@ Title:    好冷  逢考必过
 
 本目录
 
+1. 本章节主要是选择哪个网站的解析器
+
+2. `extractors.explain.md` 是 解析器目录和抖音解析的章节
+
+- [x] [douyin-extractors](#1-extractors-douyin)
+
+- [x] [哔哩哔哩-extractors](./bilibili.extractors.md)
+
+- [ ] 其他
+
+[annie 支持的网站](https://github.com/iawia002/annie#supported-sites)
 
 
 ---
